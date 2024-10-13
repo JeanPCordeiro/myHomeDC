@@ -256,7 +256,7 @@
                   "height": 35
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp1s0",
                "format": "{2}",
                "refresh": 1000,
                "debug_frame": true,
@@ -276,7 +276,7 @@
                   "height": 10
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp1s0",
                "format": "{1}",
                "refresh": 1000,
                "debug_frame": true,
@@ -317,7 +317,7 @@
                   "height": 15
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp1s0",
                "format": "{15}",
                "refresh": 1000,
                "debug_frame": true,
@@ -336,7 +336,7 @@
                   "height": 35
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp1s0",
                "format": "{5}",
                "refresh": 1000,
                "debug_frame": true,
@@ -356,7 +356,7 @@
                   "height": 10
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp1s0",
                "format": "{4}",
                "refresh": 1000,
                "debug_frame": true,
@@ -397,7 +397,7 @@
                   "height": 15
                },
                "sensor": true,
-               "value": "network_enp2s0",
+               "value": "network_enp1s0",
                "format": "{16}",
                "refresh": 1000,
                "debug_frame": true,
@@ -494,7 +494,7 @@
                   "height": 35
                },
                "sensor": true,
-               "value": "network_enp4s0",
+               "value": "network_enp3s0",
                "format": "{2}",
                "refresh": 1000,
                "debug_frame": true,
@@ -514,7 +514,7 @@
                   "height": 10
                },
                "sensor": true,
-               "value": "network_enp4s0",
+               "value": "network_enp3s0",
                "format": "{1}",
                "refresh": 1000,
                "debug_frame": true,
@@ -555,7 +555,7 @@
                   "height": 15
                },
                "sensor": true,
-               "value": "network_enp4s0",
+               "value": "network_enp3s0",
                "format": "{15}",
                "refresh": 1000,
                "debug_frame": true,
@@ -574,7 +574,7 @@
                   "height": 35
                },
                "sensor": true,
-               "value": "network_enp4s0",
+               "value": "network_enp3s0",
                "format": "{5}",
                "refresh": 1000,
                "debug_frame": true,
@@ -594,7 +594,7 @@
                   "height": 10
                },
                "sensor": true,
-               "value": "network_enp4s0",
+               "value": "network_enp3s0",
                "format": "{4}",
                "refresh": 1000,
                "debug_frame": true,
@@ -635,7 +635,7 @@
                   "height": 15
                },
                "sensor": true,
-               "value": "network_enp4s0",
+               "value": "network_enp3s0",
                "format": "{16}",
                "refresh": 1000,
                "debug_frame": true,
@@ -654,7 +654,7 @@
                   "height": 20
                },
                "sensor": false,
-               "value": "homesrv01",
+               "value": "homesrv02",
                "format": "",
                "refresh": 1000,
                "debug_frame": false,
