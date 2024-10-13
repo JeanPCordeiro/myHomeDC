@@ -642,6 +642,25 @@
                "font": "12px Arial",
                "color": "#26ff00",
                "align": "right"
+            },
+            {
+               "id": 33,
+               "group": 1,
+               "name": "text",
+               "rect": {
+                  "x": 0,
+                  "y": 300,
+                  "width": 170,
+                  "height": 20
+               },
+               "sensor": false,
+               "value": "homesrv01",
+               "format": "",
+               "refresh": 1000,
+               "debug_frame": false,
+               "font": "bold 18px Arial",
+               "color": "#1500ff",
+               "align": "center"
             }
          ],
          "duration": 60000,
