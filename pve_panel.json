@@ -654,7 +654,7 @@
                   "height": 20
                },
                "sensor": false,
-               "value": "homesrv02",
+               "value": "homesrv03",
                "format": "",
                "refresh": 1000,
                "debug_frame": false,
