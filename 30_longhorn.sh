@@ -6,7 +6,7 @@ set -o xtrace
 #
 # Install Longhorn
 #
-kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.7.1/deploy/longhorn.yaml
+kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.7.2/deploy/longhorn.yaml
 watch kubectl get pods -n longhorn-system
 sleep 5
 kubectl create -f https://raw.githubusercontent.com/longhorn/longhorn/v1.7.1/examples/storageclass.yaml

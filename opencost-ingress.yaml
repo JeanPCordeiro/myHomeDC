@@ -1,0 +1,28 @@
+#
+# WP Ingress
+#
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: opencost-ingress
+  namespace: opencost
+  annotations:
+    spec.ingressClassName: traefik
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
+spec:
+  rules:
+    - host: opencost.sys.les-cordeiro.fr
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: opencost
+                port:
+                  name: opencost-ui
+  tls:
+    - secretName: opencost-tls
+      hosts:
+        - opencost.sys.les-cordeiro.fr
