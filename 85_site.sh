@@ -13,6 +13,6 @@ export DOMAIN=les-cordeiro.fr
 #
 kubectl create ns ${NAMESITE}
 
-cat wordpress.yaml | envsubst | kubectl apply -f - -n ${NAMESITE}
+cat wordpress_site.yaml | envsubst | kubectl apply -f - -n ${NAMESITE}
 watch kubectl get pods -A
 

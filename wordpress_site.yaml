@@ -194,7 +194,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
 spec:
   rules:
-    - host: ${DOMAIN}
+    - host: ${NAMESITE}.${DOMAIN}
       http:
         paths:
           - path: /
@@ -207,5 +207,5 @@ spec:
   tls:
     - secretName: wordpress-tls
       hosts:
-        - ${DOMAIN}
+        - ${NAMESITE}.${DOMAIN}
 
