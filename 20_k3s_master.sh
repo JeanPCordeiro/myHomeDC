@@ -25,4 +25,5 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL=latest K3S_TOKEN=HomeDCK3sTok
 
 sleep 5
 kubectl get nodes -o wide
+sleep 5
 kubectl get pods -A

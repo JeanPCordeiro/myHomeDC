@@ -1,0 +1,46 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  creationTimestamp: 2018-07-04T15:03:08Z
+  generation: 1
+  labels:
+    kubevirt.io/os: linux
+  name: vm1
+spec:
+  runStrategy: Always
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        kubevirt.io/domain: vm1
+    spec:
+      domain:
+        cpu:
+          cores: 2
+        devices:
+          disks:
+          - disk:
+              bus: virtio
+            name: disk0
+          - cdrom:
+              bus: sata
+              readonly: true
+            name: cloudinitdisk
+        machine:
+          type: q35
+        resources:
+          requests:
+            memory: 1024M
+      volumes:
+      - name: disk0
+        persistentVolumeClaim:
+          claimName: fedora
+      - cloudInitNoCloud:
+          userData: |
+            #cloud-config
+            hostname: vm1
+            ssh_pwauth: True
+            disable_root: false
+            ssh_authorized_keys:
+            - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMn6/Fa+rv3bb6M5BqqIwzEHZmclJPdHHEjVMc0mDyxmQ6P8OPaWqaiTzqpthy/aY963j6YlsSC5b9n1kK7yjei7VKF39/vC4+T5pPIIXy+PMRCBX+klcu4ouG1zoEpGu3vWZb+E9iaLy9TidU1IE4Ztg97BLrqY9VzCwnUt7cbk2OjyPo06cWRTCS8nG663Mntho8EFTdGdb4PzeOOqL2DXY9NowTvJwgcTtrSQQHQIXsnqBy8EWfcLNaFYqfBilxAAYwj+aaF628yVd1YgD6WPrxq/Q1LccY/FBq4QicSLGnsf/TfHKT6GVKSdxiGmebzI3EpoHVrbNt1GBxKDJlZhkACIuNpuNDZrRFtsN9H1rI7wtuNfSYu5xFuorDqMZoT1TxVy/wz4J7XiM12hsTYA2ptW8TnhPxEVR18M7Pyd8aIxWgweV1ENZ9IH8rszl7ZGaghsggBZwoO9TftIU4YScdooxkAWzv8JsayEqI7q723gV3yVpvI6WQDl28Ozc= root@homesrv01
+        name: cloudinitdisk
